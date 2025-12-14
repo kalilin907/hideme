@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const PLATFORM_RATE = 0.02;
 
   // 🔹 CHANGE THESE DETAILS
-  const UPI_ID = "yourupi@bank";     // e.g. sayan@paytm
+  const UPI_ID = "BHARATPE.8V0C1N1P3S20228@fbpe";     // e.g. sayan@paytm
   const PAYEE_NAME = "SkillShift";   // Your name / business
 
   function formatINR(n) {
@@ -63,3 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = upiURL;
   });
 });
+
