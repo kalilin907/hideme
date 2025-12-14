@@ -1,0 +1,115 @@
+:root{
+  --bg:#f6f7fb;
+  --accent:#0a58ca;
+  --card:#fff;
+  --muted:#6b6f7a;
+  --shadow: 0 6px 18px rgba(20,20,40,0.06);
+  --radius:10px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f2f5fb 0%, #f6f7fb 100%);
+  color:#1f2a44;
+  min-height:100vh;
+}
+
+/* Layout */
+.page{
+  display:flex;
+  gap:40px;
+  padding:40px;
+  align-items:flex-start;
+  max-width:1200px;
+  margin:24px auto;
+}
+
+.left-column{
+  flex:1.0;
+  padding:24px 36px;
+}
+.brand .logo{
+  font-weight:700;
+  color:var(--accent);
+  font-size:20px;
+  margin-bottom:14px;
+}
+
+.left-column h1{
+  font-size:20px;
+  margin:8px 0 18px;
+}
+
+.note ul{ margin:8px 0 18px 18px; color:var(--muted); }
+.contact, .terms{ margin-top:18px; color:var(--muted); font-size:14px }
+
+/* Right column / card */
+.right-column{
+  width:420px;
+  display:flex;
+  justify-content:center;
+}
+
+.payment-card{
+  background:var(--card);
+  width:100%;
+  padding:22px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.payment-card h2{
+  margin:0 0 14px 0;
+  color:var(--accent);
+  font-size:18px;
+}
+
+/* Form */
+form label{
+  display:block;
+  font-size:13px;
+  margin-bottom:12px;
+  color:#24314a;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:6px;
+  border:1px solid #e6e9f1;
+  margin-top:6px;
+  font-size:14px;
+  outline:none;
+}
+.plans{ margin:12px 0; }
+.plan{ background:#fafbff; padding:10px; margin-bottom:8px; border-radius:8px; border:1px solid #eef2ff; }
+.plan label{ display:flex; align-items:center; gap:10px; font-size:14px; }
+
+/* price summary */
+.price-summary{ margin-top:16px; padding:12px; border-radius:8px; background:#fcfdff; border:1px solid #f1f4fb; font-size:14px; color:#2b3350}
+.price-summary div{ display:flex; justify-content:space-between; margin-bottom:8px; }
+.price-summary .total{ font-weight:700; font-size:16px; margin-top:8px; }
+
+/* Button */
+.actions{ margin-top:12px; display:flex; justify-content:flex-end; }
+button.pay{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow: 0 6px 12px rgba(10,88,202,0.15);
+}
+button.pay:disabled{ opacity:0.5; cursor:not-allowed; }
+
+/* Responsive */
+@media(max-width:920px){
+  .page{ flex-direction:column; padding:18px; max-width:760px; }
+  .right-column{ width:100% }
+}

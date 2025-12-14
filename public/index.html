@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillShift-style Internship Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Razorpay checkout (client) -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <div class="page">
+    <aside class="left-column">
+      <div class="brand"> 
+        <img src="icon.jpg" width="20" height="20" alt="SkillShift Icon" />
+        <div class="logo">SkillShift</div>
+       
+      </div>
+
+      <h1>SkillShift Internship | Registration Form</h1>
+
+      <div class="note">
+        <strong>Note:</strong>
+        <ul>
+          <li>Select only one Internship Plan</li>
+          <li>Charges include 18% GST + 2% Platform Fees</li>
+          <li>Offer letter will be provided within 24 working hours</li>
+          <li>Portal access will be provided on the internship start date</li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h4>Contact Us:</h4>
+        <p>support@SkillShift.in</p>
+        <p>9604083810</p>
+      </div>
+
+      <div class="terms">
+        <h4>Terms &amp; Conditions:</h4>
+        <p>
+          You agree to share information entered on this page with SkillShift
+          (owner of this page) and Razorpay, adhering to applicable laws.
+        </p>
+      </div>
+    </aside>
+
+    <main class="right-column">
+      <div class="payment-card">
+        <h2>Payment Details</h2>
+
+        <form id="regForm">
+          <label>Full Name
+            <input type="text" id="fullName" name="fullname" placeholder="Enter full name" required />
+          </label>
+
+          <label>Phone
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{10}" required />
+          </label>
+
+          <label>Email
+            <input type="email" id="email" name="email" placeholder="Enter email" required />
+          </label>
+
+          <label>Domain Of Interest
+           <select id="domain" name="domain" required>
+    <option value="">--Select--</option>
+
+    <!-- Software & Development -->
+    <option>Web Development</option>
+    <option>Full Stack Development</option>
+    <option>App Development</option>
+    <option>Python Development</option>
+    <option>Java Development</option>
+    <option>C/C++ Programming</option>
+    <option>Game Development</option>
+
+    <!-- Data & AI -->
+    <option>Data Science</option>
+    <option>Machine Learning</option>
+    <option>Artificial Intelligence</option>
+    <option>Deep Learning</option>
+    <option>Data Analytics</option>
+
+    <!-- Hardware & Electronics -->
+    <option>Embedded Systems</option>
+    <option>Internet of Things (IoT)</option>
+    <option>Robotics</option>
+    <option>VLSI</option>
+    <option>PCB Design</option>
+
+    <!-- Security & Cloud -->
+    <option>Cybersecurity</option>
+    <option>Cloud Computing</option>
+    <option>DevOps</option>
+    <option>Networking</option>
+    <option>Blockchain</option>
+
+    <!-- Design & Marketing -->
+    <option>UI/UX Design</option>
+    <option>Graphic Design</option>
+    <option>Digital Marketing</option>
+
+    <!-- Extra Domains -->
+    <option>Software Testing (QA)</option>
+    <option>Database Management</option>
+    <option>AR / VR Development</option>
+
+  </select> 
+          </label>
+
+          <div class="plans">
+            <div class="plan">
+              <label>
+                <input type="radio" name="plan" value="199" />
+                2 Months Internship Program (₹199)
+              </label>
+            </div>
+            <div class="plan">
+              <label>
+                <input type="radio" name="plan" value="599" />
+                3 Months Internship Program (₹599)
+              </label>
+            </div>
+            <div class="plan">
+              <label>
+                <input type="radio" name="plan" value="999" />
+                4 to 6 Months Internship Program (₹999)
+              </label>
+            </div>
+          </div>
+
+          <div class="price-summary">
+            <div>Subtotal: <span id="subtotal">₹0.00</span></div>
+            <div>GST (18%): <span id="gst">₹0.00</span></div>
+            <div>Platform Fee (2%): <span id="platformFee">₹0.00</span></div>
+            <div class="total">Pay <span id="totalAmount">₹0.00</span></div>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="payBtn" class="pay" disabled>Pay ₹0.00</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
